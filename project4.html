@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank-Bang</title>
+    <link rel="stylesheet" href="css/project1.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">back</a>
+</nav>
+<main>
+    <section>
+        <h2>Checkers</h2>
+        <p> This game was a project for a programming technology course.
+            Checkers have 3 version: Russian, English, Poland. Also, it has a multiplayer and you can play with friend.
+        </p>
+        <img src="./images/project4/2.png" alt="Project photo 1">
+        <img src="./images/project4/1.png" alt="Project photo 2">
+    </section>
+    <section>
+        <h2>Code</h2>
+        <p>how server managements connections from players</p>
+        <pre><code>
+                // Set connection and make a pair of players
+                try (var listener = new ServerSocket(58901)) {
+                    System.out.println("Checkers Server is Running...");
+                    var pool = Executors.newFixedThreadPool(200);
+                    Game gameExample = new Game();
+                    while (true) {
+                        if(type == 1) {
+                            System.out.println("Russian checkers was chosen");
+                            gameExample = new Game(GameType.Russian, 8);
+                        }
+                        if(type == 2) {
+                            System.out.println("English checkers was chosen");
+                            gameExample = new Game(GameType.English, 8);
+                        }
+                        if(type == 3) {
+                            System.out.println("Polish checkers was chosen");
+                            gameExample = new Game(GameType.Polish, 10);
+                        }
+                        pool.execute(gameExample.new Player(listener.accept(), Color.White));
+                        pool.execute(gameExample.new Player(listener.accept(), Color.Black));
+                    }
+                }
+            </code></pre>
+    </section>
+</main>
+<footer>
+    <p1>&copy; 2022 Checkers</p1>
+</footer>
+</body>
+</html>

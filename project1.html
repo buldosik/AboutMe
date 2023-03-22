@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank-Bang</title>
+    <link rel="stylesheet" href="css/project1.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">back</a>
+    </nav>
+    <aside>
+        <img src="./images/project1/money.gif" alt="Image 1" class="fixed-image left">
+        <img src="./images/project1/crystal.gif" alt="Image 2" class="fixed-image right">
+    </aside>
+    <main>
+        <section>
+            <h2>Bank-Bang</h2>
+            <p> That project was started in 2019.
+                Bank-Bang was planned as copy of Jetpack Joyride, but with own plot and features. The main idea was that alien try to rob banks.
+                However, it was abandoned after a few weeks of development, as there were disagreements in the team.
+            </p>
+            <h1>Original Jetpack Joyride</h1>
+            <img src="./images/project1/jetpack.png" alt="Project photo 1">
+            <h1>Prototypes of our copy with own ideas</h1>
+            <img src="./images/project1/copyJetpack.png" alt="Project photo 2">
+        </section>
+        <section class="gifs">
+            <h2>Some Animations from project</h2>
+            <img src="./images/project1/alienfly.gif" alt="Project animation 1">
+            <img src="./images/project1/alienjump.gif" alt="Project animation 2">
+        </section>
+        <section>
+            <h2>Code</h2>
+            <p>generation of enemies and obstacles</p>
+            <pre><code>
+                void Start()
+                {
+                    Setup();
+                    MapSegmentSetup();
+                    GenerateObjectsAtRandomPositions();
+                    cameraEnd = new Vector3(segmentGeneratorStart.x - 1f, segmentGeneratorStart.y - 1f, 0f);
+                    segmentGeneratorStart.x += width;
+                    previousMapSegment = mapSegment;
+                    MapSegmentSetup();
+                    GenerateObjectsAtRandomPositions();
+                }
+            </code></pre>
+        </section>
+    </main>
+    <footer>
+        <p1>&copy; 2019 Bank-Bang</p1>
+    </footer>
+</body>
+</html>
