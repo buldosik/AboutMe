@@ -30,6 +30,7 @@ aside {
 @media (max-width: 999px) {
     aside img {
         display: none;
+        max-width: 0%;
     }
 
 }
