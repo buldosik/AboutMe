@@ -21,11 +21,19 @@ aside {
     width: 200px;
     height: 100%;
 }
-
-aside img {
-    display: block;
-    margin-bottom: 10px;
+@media (min-width: 1000px){
+    aside img {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
+@media (max-width: 999px) {
+    aside img {
+        display: none;
+    }
+
+}
+
 .left {
     left: 12%;
     transform: translate(-50%, -50%);
