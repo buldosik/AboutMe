@@ -1,0 +1,45 @@
+$main-color: #fff
+
+$header-font-size: 36px
+$miniHeader-font-size: 24px
+$text-font-size: 18px
+
+$base-margin-top: 50px
+$items-margin: 20px
+
+$box-shadow: 0 0 10px #ccc
+
+@mixin myH2()
+  h2
+    font-size: $header-font-size
+    margin-bottom: $items-margin
+
+@mixin myP()
+  p
+    font-size: $text-font-size
+    line-height: 1.5
+
+@mixin myHeader($color: $main-color)
+  margin-top: $base-margin-top
+  padding: 50px 0
+  background-color: $color
+  text-align: center
+
+  @include myH2
+
+@mixin myList()
+  max-width: 1200px
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+%baseItem
+  h3
+    font-size: $miniHeader-font-size
+    margin-bottom: $items-margin/2
+    color: #333
+
+  p
+    font-size: $text-font-size
+    margin-bottom: $items-margin

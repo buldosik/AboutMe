@@ -1,0 +1,30 @@
+aside
+  position: absolute
+  top: 0
+  right: 0
+  width: 200px
+  height: 100%
+
+.fixed-image
+  position: fixed
+  top: 50%
+
+@media (min-width: 1000px)
+  aside img
+    display: block
+    margin-bottom: 10px
+
+@media (max-width: 999px)
+  aside img
+    display: none
+    max-width: 0
+
+.left
+  left: 12%
+  transform: translate(-50%, -50%)
+
+.right
+  right: 12%
+  max-width: 150px
+  transform: translate(50%, -50%)
+

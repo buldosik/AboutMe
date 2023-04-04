@@ -1,0 +1,27 @@
+.Projects
+  @include myHeader($color : #f8f8f8)
+
+.project-list
+  @include myList
+
+.project
+  margin: $items-margin
+  max-width: 300px
+  box-shadow: $box-shadow
+
+.project-info
+  padding: 10px
+
+  @extend %baseItem
+
+  a
+    display: block
+    background-color: #333
+    color: $main-color
+    padding: 10px
+    border-radius: 5px
+    transition: all 0.3s ease-in-out
+
+    &:hover
+      background-color: $main-color
+      color: #333

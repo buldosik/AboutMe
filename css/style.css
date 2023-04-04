@@ -4,18 +4,9 @@
     justify-content: center;
     margin-top: 50px;
 }
-@media (min-width: 600px) {
-    .size {
-        min-width: 200px;
-    }
-}
-@media (max-width: 599px) {
-    .size {
-        min-width: 40%;
-    }
-}
 .profileImage {
     width: 200px;
+    min-width: 200px;
     height: 200px;
     margin-right: 50px;
     border-radius: 50%;

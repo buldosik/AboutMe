@@ -1,0 +1,22 @@
+.Interests
+  @include myHeader
+
+.interest-list
+  @include myList
+
+.interest
+  margin: $items-margin
+  max-width: 300px
+  box-shadow: $box-shadow
+  text-align: left
+  padding: 20px
+
+  i
+    font-size: $header-font-size
+    margin-right: $items-margin/2
+    color: #333
+
+  @extend %baseItem
+
+  p
+    color: #777

@@ -6,71 +6,71 @@
     <link rel="stylesheet" href="css/project1.css">
 </head>
 <body>
-<nav>
-    <a href="index.html">back</a>
-</nav>
-<main>
-    <section>
-        <h2>Space Battles</h2>
-        <p> That project was started in 2020.
-            Space Battles is small arcade game about space. Where you need to survive as long as possible. You need to avoid meteorites, kill enemies and defeats bosses.
-        </p>
-        <img src="./images/project2/mainmenu.png" alt="Project photo 1">
-        <img src="./images/project2/shop.png" alt="Project photo 2">
-        <img src="./images/project2/gameplay.png" alt="Project photo 3">
-    </section>
-    <section>
-        <h2>Code</h2>
-        <p>script of player movement</p>
-        <pre><code>
-                public class Ship_Movement : MonoBehaviour
-                {
-                    [SerializeField]
-                    private float Radius = 4f;
-                    [SerializeField]
-                    private float AngularSpeed = 20f;
-                    [HideInInspector]
-                    public float Angle;
-                    private Vector3 Offset = new Vector3 (0, 0, 90);
-                    private bool _pressedLeft = false;
-                    private bool _pressedRight = false;
+    <nav>
+        <a href="index.html">back</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Space Battles</h2>
+            <p> That project was started in 2020.
+                Space Battles is small arcade game about space. Where you need to survive as long as possible. You need to avoid meteorites, kill enemies and defeats bosses.
+            </p>
+            <img src="./images/project2/mainmenu.png" alt="Project photo 1">
+            <img src="./images/project2/shop.png" alt="Project photo 2">
+            <img src="./images/project2/gameplay.png" alt="Project photo 3">
+        </section>
+        <section>
+            <h2>Code</h2>
+            <p>script of player movement</p>
+            <pre><code>
+                    public class Ship_Movement : MonoBehaviour
+                    {
+                        [SerializeField]
+                        private float Radius = 4f;
+                        [SerializeField]
+                        private float AngularSpeed = 20f;
+                        [HideInInspector]
+                        public float Angle;
+                        private Vector3 Offset = new Vector3 (0, 0, 90);
+                        private bool _pressedLeft = false;
+                        private bool _pressedRight = false;
 
-                    void Start() {
-                        Angle = -90 * Mathf.Deg2Rad;
-                    }
-                    public void DownLeft() {
-                        _pressedLeft = true;
-                    }
-                    public void DownRight() {
-                        _pressedRight = true;
-                    }
-                    public void UpLeft() {
-                        _pressedLeft = false;
-                    }
-                    public void UpRight() {
-                        _pressedRight = false;
-                    }
-                    void Update() {
-                        float XPosition = Mathf.Cos(Angle) * Radius;
-                        float YPosition = Mathf.Sin(Angle) * Radius;
-                        transform.position = new Vector2(XPosition, YPosition);
-                        transform.rotation = Quaternion.Euler(Offset + new Vector3(0, 0, Angle * Mathf.Rad2Deg));
+                        void Start() {
+                            Angle = -90 * Mathf.Deg2Rad;
+                        }
+                        public void DownLeft() {
+                            _pressedLeft = true;
+                        }
+                        public void DownRight() {
+                            _pressedRight = true;
+                        }
+                        public void UpLeft() {
+                            _pressedLeft = false;
+                        }
+                        public void UpRight() {
+                            _pressedRight = false;
+                        }
+                        void Update() {
+                            float XPosition = Mathf.Cos(Angle) * Radius;
+                            float YPosition = Mathf.Sin(Angle) * Radius;
+                            transform.position = new Vector2(XPosition, YPosition);
+                            transform.rotation = Quaternion.Euler(Offset + new Vector3(0, 0, Angle * Mathf.Rad2Deg));
 
-                        if(_pressedLeft)
-                            Angle -= AngularSpeed * Time.deltaTime;
-                        if(_pressedRight)
-                            Angle += AngularSpeed * Time.deltaTime;
+                            if(_pressedLeft)
+                                Angle -= AngularSpeed * Time.deltaTime;
+                            if(_pressedRight)
+                                Angle += AngularSpeed * Time.deltaTime;
 
-                        if (Mathf.Abs(Angle) >= Mathf.PI * 2)
-                            Angle = Mathf.Abs(Angle) - Mathf.PI * 2;
-                        GlobalCache.Inst.PlayerAngle = Angle;
+                            if (Mathf.Abs(Angle) >= Mathf.PI * 2)
+                                Angle = Mathf.Abs(Angle) - Mathf.PI * 2;
+                            GlobalCache.Inst.PlayerAngle = Angle;
+                        }
                     }
-                }
-            </code></pre>
-    </section>
-</main>
-<footer>
-    <p1>&copy; 2020 Space Battles</p1>
-</footer>
+                </code></pre>
+        </section>
+    </main>
+    <footer>
+        <p1>&copy; 2020 Space Battles</p1>
+    </footer>
 </body>
 </html>
