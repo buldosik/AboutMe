@@ -1,0 +1,122 @@
+/* Variabes */
+body {
+  margin-top: 70px;
+  background: #292926;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.wrappper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+canvas {
+  color: #fff;
+  border: #fff dashed 2px;
+  padding: 15px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 5px 0;
+  font-size: 3em;
+}
+
+p {
+  font-size: 2em;
+}
+
+#alphabet {
+  margin: 15px auto;
+  padding: 0;
+  max-width: 800px;
+}
+#alphabet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#alphabet li {
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none;
+  width: 60px;
+  height: 50px;
+  padding-top: 10px;
+  background: #fff;
+  color: #292926;
+  cursor: pointer;
+  border-radius: 5px;
+  border: solid 1px #fff;
+}
+#alphabet li:hover {
+  background: #292926;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 2.2em;
+}
+
+.active {
+  cursor: default;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+#gameState {
+  font-size: 1.8em;
+  text-align: center;
+  display: block;
+}
+
+button {
+  border-radius: 5px;
+  background: #292926;
+  color: #fff;
+  border: solid 3px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 18px 10px;
+  width: 350px;
+  margin: 10px;
+  outline: none;
+}
+button:hover {
+  background: #fff;
+  border: solid 1px #fff;
+  color: #292926;
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+    padding: 0 0 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  #alphabet {
+    padding: 0 0 0 25px;
+  }
+}
+
+/*# sourceMappingURL=hangman.css.map */

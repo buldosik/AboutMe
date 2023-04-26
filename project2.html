@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Bank-Bang</title>
-    <link rel="stylesheet" href="css/project1.css">
+    <link rel="stylesheet" href="sass/myProjects.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <nav>
-        <a href="index.html">back</a>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="sub-container">
+                <nav class="navbar">
+                    <a href="index.html" class="nav-branding">Home</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#section1" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section2" class="nav-link">Code</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <script src="JS/hamburgerMenu.js"></script>
+        <script src="JS/scrollOffset.js"></script>
+    </header>
     <main>
-        <section>
+        <section id="section1">
             <h2>Space Battles</h2>
             <p> That project was started in 2020.
                 Space Battles is small arcade game about space. Where you need to survive as long as possible. You need to avoid meteorites, kill enemies and defeats bosses.
             </p>
-            <img src="./images/project2/mainmenu.png" alt="Project photo 1">
-            <img src="./images/project2/shop.png" alt="Project photo 2">
-            <img src="./images/project2/gameplay.png" alt="Project photo 3">
+            <img src="" alt="Project photo 1">
+            <img src="" alt="Project photo 2">
+            <img src="" alt="Project photo 3">
         </section>
-        <section>
+        <section id="section2">
             <h2>Code</h2>
             <p>script of player movement</p>
             <pre><code>
@@ -72,5 +94,6 @@
     <footer>
         <p1>&copy; 2020 Space Battles</p1>
     </footer>
+    <script src="JS/loadImages.js"></script>
 </body>
 </html>

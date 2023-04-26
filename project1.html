@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <title>Bank-Bang</title>
     <link rel="stylesheet" href="sass/myProjects.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <nav>
-        <a href="index.html">back</a>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="sub-container">
+                <nav class="navbar">
+                    <a href="index.html" class="nav-branding">Home</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#section1" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section2" class="nav-link">Code</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <script src="JS/hamburgerMenu.js"></script>
+        <script src="JS/scrollOffset.js"></script>
+    </header>
     <aside>
         <img src="./images/project1/money.gif" alt="Image 1" class="fixed-image left">
         <img src="./images/project1/crystal.gif" alt="Image 2" class="fixed-image right">
     </aside>
     <main>
-        <section>
+        <section id="section1">
             <h2>Bank-Bang</h2>
             <p> That project was started in 2019.
                 Bank-Bang was planned as copy of Jetpack Joyride, but with own plot and features. The main idea was that alien try to rob banks.
@@ -30,7 +52,7 @@
             <img src="./images/project1/alienfly.gif" alt="Project animation 1">
             <img src="./images/project1/alienjump.gif" alt="Project animation 2">
         </section>
-        <section>
+        <section id="section2">
             <h2>Code</h2>
             <p>generation of enemies and obstacles</p>
             <pre><code>

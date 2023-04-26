@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Bank-Bang</title>
-    <link rel="stylesheet" href="css/project1.css">
+    <link rel="stylesheet" href="sass/myProjects.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <nav>
-        <a href="index.html">back</a>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="sub-container">
+                <nav class="navbar">
+                    <a href="index.html" class="nav-branding">Home</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#section1" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section2" class="nav-link">Code</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <script src="JS/hamburgerMenu.js"></script>
+        <script src="JS/scrollOffset.js"></script>
+    </header>
     <main>
-        <section>
+        <section id="section1">
             <h2>Checkers</h2>
             <p> This game was a project for a programming technology course.
                 Checkers have 3 version: Russian, English, Poland. Also, it has a multiplayer and you can play with friend.
@@ -18,7 +40,7 @@
             <img src="./images/project4/2.png" alt="Project photo 1">
             <img src="./images/project4/1.png" alt="Project photo 2">
         </section>
-        <section>
+        <section id="section2">
             <h2>Code</h2>
             <p>how server managements connections from players</p>
             <pre><code>

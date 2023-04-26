@@ -1,0 +1,38 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #292926;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 1600px;
+    margin: auto;
+}
+
+@media(max-width: 1600px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.navbar{
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}

@@ -3,11 +3,43 @@
 <head>
     <meta charset="utf-8">
     <link href="sass/main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/421f737639.js" crossorigin="anonymous"></script>
     <title>Artsiom Siandzevich - Personal Website</title>
 </head>
 <main>
-    <section class="AboutMe">
+    <header>
+        <div class="container">
+            <div class="sub-container">
+                <nav class="navbar">
+                    <a href="hangman/hangman.html" class="nav-branding">Hangman</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#section1" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section2" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section3" class="nav-link">Interests</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section5" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <script src="JS/hamburgerMenu.js"></script>
+        <script src="JS/scrollOffset.js"></script>
+    </header>
+
+    <section class="AboutMe" id="section1">
         <div class="profileImage size">
             <img src="images/profile.jpg" alt="Your profile picture">
         </div>
@@ -17,7 +49,7 @@
         </div>
     </section>
 
-    <section class="Projects">
+    <section class="Projects" id="section2">
         <h2>Projects</h2>
         <div class="project-list">
             <div class="project">
@@ -55,7 +87,7 @@
         </div>
     </section>
 
-    <section class="Interests">
+    <section class="Interests" id="section3">
         <h2>Development Interests</h2>
         <div class="interest-list">
             <div class="interest">
@@ -71,7 +103,7 @@
         </div>
     </section>
 
-    <section class="Interests">
+    <section class="Interests" id="section4">
         <h2>Lifestyle  Interests</h2>
         <div class="interest-list">
             <div class="interest">
@@ -87,12 +119,12 @@
             <div class="interest">
                 <i class="fa-solid fa-chess"></i>
                 <h3>Board Games</h3>
-                <p>I'm a big fan of board games. The most interesting way to play with friends.</p>
+                <p>I"m a big fan of board games. The most interesting way to play with friends.</p>
             </div>
         </div>
     </section>
 
-    <section class="Contact">
+    <section class="Contact" id="section5">
         <h2>Contact Me</h2>
         <contact-info>
             <p><i class="fas fa-envelope"></i> Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
