@@ -12,19 +12,6 @@
             <div class="sub-container">
                 <nav class="navbar">
                     <a href="index.html" class="nav-branding">Home</a>
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="#section1" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#section2" class="nav-link">Code</a>
-                        </li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -34,61 +21,10 @@
     <main>
         <section id="section1">
             <h2>Space Battles</h2>
-            <p> That project was started in 2020.
-                Space Battles is small arcade game about space. Where you need to survive as long as possible. You need to avoid meteorites, kill enemies and defeats bosses.
-            </p>
+            <p> Space Battles is an arcade game where your goal is to survive as long as possible in an intense space battle environment. Take control of your spaceship and face off against endless waves of enemy ships, dodging their attacks while trying to eliminate as many as possible. How long can you last?</p>
             <img src="" alt="Project photo 1">
             <img src="" alt="Project photo 2">
             <img src="" alt="Project photo 3">
-        </section>
-        <section id="section2">
-            <h2>Code</h2>
-            <p>script of player movement</p>
-            <pre><code>
-                    public class Ship_Movement : MonoBehaviour
-                    {
-                        [SerializeField]
-                        private float Radius = 4f;
-                        [SerializeField]
-                        private float AngularSpeed = 20f;
-                        [HideInInspector]
-                        public float Angle;
-                        private Vector3 Offset = new Vector3 (0, 0, 90);
-                        private bool _pressedLeft = false;
-                        private bool _pressedRight = false;
-
-                        void Start() {
-                            Angle = -90 * Mathf.Deg2Rad;
-                        }
-                        public void DownLeft() {
-                            _pressedLeft = true;
-                        }
-                        public void DownRight() {
-                            _pressedRight = true;
-                        }
-                        public void UpLeft() {
-                            _pressedLeft = false;
-                        }
-                        public void UpRight() {
-                            _pressedRight = false;
-                        }
-                        void Update() {
-                            float XPosition = Mathf.Cos(Angle) * Radius;
-                            float YPosition = Mathf.Sin(Angle) * Radius;
-                            transform.position = new Vector2(XPosition, YPosition);
-                            transform.rotation = Quaternion.Euler(Offset + new Vector3(0, 0, Angle * Mathf.Rad2Deg));
-
-                            if(_pressedLeft)
-                                Angle -= AngularSpeed * Time.deltaTime;
-                            if(_pressedRight)
-                                Angle += AngularSpeed * Time.deltaTime;
-
-                            if (Mathf.Abs(Angle) >= Mathf.PI * 2)
-                                Angle = Mathf.Abs(Angle) - Mathf.PI * 2;
-                            GlobalCache.Inst.PlayerAngle = Angle;
-                        }
-                    }
-                </code></pre>
         </section>
     </main>
     <footer>

@@ -12,19 +12,6 @@
             <div class="sub-container">
                 <nav class="navbar">
                     <a href="index.html" class="nav-branding">Home</a>
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="#section1" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#section2" class="nav-link">Code</a>
-                        </li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -39,34 +26,6 @@
             </p>
             <img src="./images/project4/2.png" alt="Project photo 1">
             <img src="./images/project4/1.png" alt="Project photo 2">
-        </section>
-        <section id="section2">
-            <h2>Code</h2>
-            <p>how server managements connections from players</p>
-            <pre><code>
-                    // Set connection and make a pair of players
-                    try (var listener = new ServerSocket(58901)) {
-                        System.out.println("Checkers Server is Running...");
-                        var pool = Executors.newFixedThreadPool(200);
-                        Game gameExample = new Game();
-                        while (true) {
-                            if(type == 1) {
-                                System.out.println("Russian checkers was chosen");
-                                gameExample = new Game(GameType.Russian, 8);
-                            }
-                            if(type == 2) {
-                                System.out.println("English checkers was chosen");
-                                gameExample = new Game(GameType.English, 8);
-                            }
-                            if(type == 3) {
-                                System.out.println("Polish checkers was chosen");
-                                gameExample = new Game(GameType.Polish, 10);
-                            }
-                            pool.execute(gameExample.new Player(listener.accept(), Color.White));
-                            pool.execute(gameExample.new Player(listener.accept(), Color.Black));
-                        }
-                    }
-                </code></pre>
         </section>
     </main>
     <footer>

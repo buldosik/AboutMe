@@ -12,19 +12,6 @@
             <div class="sub-container">
                 <nav class="navbar">
                     <a href="index.html" class="nav-branding">Home</a>
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="#section1" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#section2" class="nav-link">Code</a>
-                        </li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -51,23 +38,6 @@
             <h2>Some Animations from project</h2>
             <img src="./images/project1/alienfly.gif" alt="Project animation 1">
             <img src="./images/project1/alienjump.gif" alt="Project animation 2">
-        </section>
-        <section id="section2">
-            <h2>Code</h2>
-            <p>generation of enemies and obstacles</p>
-            <pre><code>
-                void Start()
-                {
-                    Setup();
-                    MapSegmentSetup();
-                    GenerateObjectsAtRandomPositions();
-                    cameraEnd = new Vector3(segmentGeneratorStart.x - 1f, segmentGeneratorStart.y - 1f, 0f);
-                    segmentGeneratorStart.x += width;
-                    previousMapSegment = mapSegment;
-                    MapSegmentSetup();
-                    GenerateObjectsAtRandomPositions();
-                }
-            </code></pre>
         </section>
     </main>
     <footer>
